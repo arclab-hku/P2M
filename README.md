@@ -127,7 +127,7 @@ wandb:
   project: # your project name
 ```
 > [!NOTE]
-> more parameters can be adjusted in ```./scripts/config/train.yaml``` (training) and ```./cfg/task/train_env.yaml``` (environment).
+> More parameters can be adjusted in ```./scripts/config/train.yaml``` (training) and ```./cfg/task/train_env.yaml``` (environment).
 
 
 ## :rocket: Testing Guide  <a name="rocket-testing-guide"></a>
@@ -169,7 +169,7 @@ To change the obstacle number and density in ```./src/uav_simulator/map_generato
 </table>
 
 > [!NOTE]
-> more parameters can be adjusted in ```./scripts/infer.py``` (checkpoint and goal) and ```./src/uav_simulator/map_generator/launch/sim_test.launch``` (environment).
+> More parameters can be adjusted in ```./scripts/infer.py``` (checkpoint and goal) and ```./src/uav_simulator/map_generator/launch/sim_test.launch``` (environment).
 
 
 ## :pencil: Citation   <a name="pencil-citation"></a>
