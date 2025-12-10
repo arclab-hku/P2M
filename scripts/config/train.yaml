@@ -1,0 +1,38 @@
+# hydra.job.chdir: false
+hydra:
+  searchpath:
+    # see https://hydra.cc/docs/advanced/search_path/
+    - file://../cfg
+
+# run
+headless: false
+
+sim: ${task.sim}
+env: ${task.env}
+
+total_frames: 500_000_000
+max_iters: -1
+eval_interval: 1000
+save_interval: 1000
+seed: 0
+
+viewer:
+  resolution: [960, 720]
+  eye: [0., -2, 1]
+  lookat: [0., 1., 0.]
+
+wandb:
+  group: ${oc.select:..task.name}
+  run_name: ${oc.select:..task.name,test}-${oc.select:..algo.name,none}
+  job_type: train
+  entity:
+  project:
+  mode: online # set to 'disabled' when debugging locally
+  run_id:
+  monitor_gym: True
+  tags:
+
+defaults:
+  - task: train_env
+  - algo: ppo
+  - _self_

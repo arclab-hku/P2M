@@ -1,0 +1,10 @@
+# hydra.job.chdir: false
+hydra:
+  searchpath:
+    # see https://hydra.cc/docs/advanced/search_path/
+    - file://../cfg
+
+defaults:
+  - task: infer_ros_env
+  - algo: ppo
+  - _self_

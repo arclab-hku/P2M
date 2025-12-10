@@ -1,0 +1,5 @@
+<launch>
+  <rosparam command="load" file="$(find lidar)/config/param.yaml" />
+  <node pkg="lidar" type="raycast" name="raycast" output="screen">
+  </node>
+</launch>

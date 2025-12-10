@@ -1,0 +1,8 @@
+lidar_range: 10.
+lidar_h_res: 36
+lidar_v_res: 6
+lidar_h_sample: 3 
+lidar_v_sample: 3 
+lidar_hfov: 360
+lidar_vfov: [-7., 52.]
+bound_h: 1.

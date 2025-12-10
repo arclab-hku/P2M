@@ -1,0 +1,45 @@
+<launch>  
+   <!-- test environment -->
+   <node pkg ="map_generator" name ="dynamic_env" type ="dynamic_env" output = "screen">
+        <param name="map/x_size" value="10" />
+        <param name="map/y_size" value="25" />
+        <param name="map/z_size" value="5" />
+        <param name="map/resolution" value="0.1"/>
+        <param name="ObstacleShape/seed" value="24"/>
+        <param name="map/obs_vel_l" value="0.34"/> 
+        <param name="map/obs_vel_h" value="1.68"/>
+        <param name="map/obs_num" value="13"/>
+        <param name="map/moving_obs_num" value="13"/>
+        <param name="ObstacleShape/sobs_lower_width" value="0.5"/>
+        <param name="ObstacleShape/sobs_upper_width" value="0.7"/>
+        <param name="ObstacleShape/dobs_lower_width" value="0.4"/>
+        <param name="ObstacleShape/dobs_upper_width" value="0.5"/>
+        <param name="ObstacleShape/lower_hei" value="3.5"/>
+        <param name="ObstacleShape/upper_hei" value="4.0"/>
+        <param name="ObstacleShape/radius_l" value="0.5"/>
+        <param name="ObstacleShape/radius_h" value="0.7"/>
+        <param name="ObstacleShape/z_l" value="0.7"/>
+        <param name="ObstacleShape/z_h" value="0.8"/>
+        <param name="pub_rate" value="50.0"/>
+        <param name="min_distance" value="0.8"/>
+    </node>
+ 
+   <!-- Visualization -->
+  <node pkg="odom_visualization" name="odom_visualization" type="odom_visualization" output="screen">
+        <remap from="~odom" to="/sim/odom"/>
+        <param name="color/a" value="1.0"/>    
+        <param name="color/r" value="0.5"/>        
+        <param name="color/g" value="0.5"/>        
+        <param name="color/b" value="0.5"/>       
+        <param name="covariance_scale" value="100.0"/>       
+        <param name="robot_scale" value="0.3"/>
+        <param name="tf45" value="true"/>
+  </node>
+
+   <node name="rviz" pkg="rviz" type="rviz"
+      args="-d $(find map_generator)/launch/rviz.rviz"
+      />
+ </launch>
+
+
+

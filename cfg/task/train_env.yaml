@@ -1,0 +1,38 @@
+name: Env
+
+defaults:
+  - /base/env_base@_here_
+  - /base/sim_base@_here_
+
+env:
+  num_envs: 128
+  max_episode_length: 3000
+
+drone_model:
+  name: Hummingbird
+  controller: LeeAccelerationController
+
+time_encoding: true
+static_obs_num_per_gird: 2 
+dynamic_obs_num: 40
+trace_prob: 0.5 
+
+lidar_range: 10.
+lidar_h_res: 36
+lidar_v_res: 6
+lidar_h_sample: 3
+lidar_v_sample: 3
+lidar_hfov: 360
+lidar_vfov: [-7., 52.]
+bound_h: 1.
+
+
+flow_gap: 25   
+flow_slide_window: 5   
+
+vis_lidar: false
+vis_dismap: false
+
+action_transform: null
+
+reward_effort_weight: 0.1
