@@ -66,7 +66,7 @@
   <tr>
     <td> p2m-deafult </td>
     <td> CNN+MLP </td>
-    <td><a href="https://github.com/bowenXuu/P2M_os/releases/download/v0.0.1/p2m_default.pt">Release/p2m_model/p2m_default.pt</a></td>
+    <td><a href="https://github.com/arclab-hku/P2M/releases/download/v0.0.1/p2m_default.pt">Release/p2m_model/p2m_default.pt</a></td>
     <td> The p2m model trained from scratch. </td></td>
   </tr>
 </table>
@@ -109,7 +109,7 @@ catkin build
 ```
 
 ### :four: Download the pretrained models
-- [**p2m_default.pt**](https://github.com/bowenXuu/P2M_os/releases/download/v0.0.1/p2m_default.pt): The pretrained p2m policy model, for testing only. Put it into ```./models```. 
+- [**p2m_default.pt**](https://github.com/arclab-hku/P2M/releases/download/v0.0.1/p2m_default.pt): The pretrained p2m policy model, for testing only. Put it into ```./models```. 
 - [**neuflow_mixed.pth**](https://github.com/neufieldrobotics/NeuFlow_v2/blob/master/neuflow_mixed.pth): The pretrained flow estimation model, for training and testing. Put it into ```./resources/NeuFlow_v2```. 
 
 
