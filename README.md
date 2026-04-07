@@ -120,10 +120,10 @@ cd scripts
 python train.py
 ```
 ### :one: Adjust the training parameters  <a name="one-adjust-the-training-parameters"></a>
-Fill in your wandb infomation in ```./scripts/config/train.yaml```.
+Fill in your wandb information in ```./scripts/config/train.yaml```.
 ```yaml
 wandb:
-  entity: # your worksapce name
+  entity: # your workspace name
   project: # your project name
 ```
 > [!NOTE]
@@ -176,14 +176,16 @@ To change the obstacle number and density in ```./src/uav_simulator/map_generato
 If you find our code or models useful in your work, please cite [our paper](https://ieeexplore.ieee.org/document/11248899):
 
 ```bibtex
-@ARTICLE{xu2025flow,
+@article{xu2025flow,
   title={Flow-Aided Flight Through Dynamic Clutters From Point to Motion},
   author={Xu, Bowen and Yan, Zexuan and Lu, Minghao and Fan, Xiyu and Luo, Yi and Lin, Youshen and Chen, Zhiqiang and Chen, Yeke and Qiao, Qiyuan and Lu, Peng},
-  journal={IEEE Robotics and Automation Letters}, 
+  journal={IEEE Robotics and Automation Letters},
+  volume={11},
+  number={1},
+  pages={218--225},
   year={2025},
   publisher={IEEE}
 }
-
 ```
 
 
